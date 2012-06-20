@@ -1,0 +1,33 @@
+#subtitle-metabox {
+	background: none;
+	display: none;
+}
+
+#subtitle-metabox .hndle {
+	display: none;
+}
+
+
+#subtitle-metabox input {
+	border: none;
+	color: #000;
+	font-size: 1.7em;
+	width: 90%;
+}
+
+#hc-subtitle {
+	border-color: #ccc;
+	color: #333333;
+	font-size: 1.7em;
+	line-height: 100%;
+	padding: 5px 8px 2px 8px;
+	width: 100%;
+}
+
+#hc-subtitle::-webkit-input-placeholder, 
+#hc-subtitle:-moz-placeholder,
+#hc-subtitle:placeholder {
+	color: #bbb !important;
+	font-style: italic;
+}
+
