@@ -19,12 +19,12 @@ if ( !function_exists('add_action') ) :
 	exit();
 
 else :
-	
+
 	// plugin definitions
 	define('HC_ST_BASE_DIR', '/'.PLUGINDIR.'/hc-subtitle');
 	define('HC_ST_CSS', HC_ST_BASE_DIR.'/css');
 	define('HC_ST_JS', HC_ST_BASE_DIR.'/javascript');
-	
+
 endif;
 
 
@@ -34,7 +34,7 @@ endif;
 */
 class Subtitle
 {
-	
+
 
 
 	/**
@@ -68,19 +68,19 @@ class Subtitle
 	public function add_meta_boxes()
 	{
 		$post_types = get_post_types();
-		
+
 		if ( $post_types ) :
-		
+
 			foreach ( $post_types as $post_type ) :
-			
+
 				if ( post_type_supports( $post_type, 'subtitle' ) ) :
-				
+
 					add_meta_box( 'subtitle-metabox', __( 'Subtitle', 'hc-subtitle' ), array( $this, 'subtitle_metabox' ), $post_type );
-				
+
 				endif;
-			
+
 			endforeach;
-		
+
 		endif;
 	}
 
@@ -147,7 +147,7 @@ class Subtitle
 	/**
 	 *
 	 * Save subtitle
-	 *	
+	 *
 	 * @access public
 	 * @return void
 	 * @author Ralf Hortt
@@ -214,7 +214,6 @@ class Subtitle
 		$wpdb->query( "DELETE FROM " . $wpdb->postmeta . " WHERE meta_key = '_subtitle'" );
 	}
 
-		
 }
 new Subtitle();
 
@@ -230,6 +229,23 @@ new Subtitle();
 function get_subtitle( $post_id = FALSE )
 {
 	return Subtitle::get_subtitle( $post_id );
+}
+
+
+
+/**
+ * Conditional Tag: Subtitle
+ *
+ * @param int $post_id Post ID
+ * @return bool
+ * @author Ralf Hortt
+ **/
+function has_subtitle( $post_id = FALSE )
+{
+	if ( '' !== Subtitle::get_subtitle( $post_id ) )
+		return TRUE;
+	else
+		return FALSE;
 }
 
 
