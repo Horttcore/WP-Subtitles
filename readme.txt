@@ -3,8 +3,8 @@ Contributors: Horttcore
 Donate link: http://www.horttcore.de
 Tags: subtitle
 Requires at least: 3.3
-Tested up to: 3.3
-Stable tag: 1.0
+Tested up to: 3.6
+Stable tag: 1.1
 
 Subtitle for post type ´page´
 
@@ -44,10 +44,15 @@ https://github.com/Horttcore/WordPress-Subtitle
 No hooks yet sorry...
 
 = I want subtitles for another post type, is this possible? =
-Sure nothing easier then that, simply add post type support for your custom post type.
+By default the plugin supports subtitles for posts and pages.
+To add support for other custom post types use this WordPress function.
 `add_post_type_support( 'YOUR_POST_TYPE', 'subtitle' )`
 
 == Changelog ==
+
+1.1
+*   Enhancement: Code cleanup
+*   Enhancement: Uninstall process
 
 1.0
 *   Initial release
