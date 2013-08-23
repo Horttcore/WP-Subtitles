@@ -4,7 +4,7 @@ Donate link: http://www.horttcore.de
 Tags: subtitle
 Requires at least: 3.3
 Tested up to: 3.6
-Stable tag: 1.1
+Stable tag: 1.2
 
 Subtitle for post type ´page´
 
@@ -49,6 +49,9 @@ To add support for other custom post types use this WordPress function.
 `add_post_type_support( 'YOUR_POST_TYPE', 'subtitle' )`
 
 == Changelog ==
+
+1.2
+*   Bugfix: Subtitle input was displayed even if the post type did not support it
 
 1.1
 *   Enhancement: Code cleanup

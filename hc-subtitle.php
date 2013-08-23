@@ -3,7 +3,7 @@
  * Plugin Name: Subtitle
  * Plugin URI: http://horttcore.de
  * Description: Subtitle
- * Version: 1.1
+ * Version: 1.2
  * Author: Ralf Hortt
  * Author URI: http://horttcore.de
  * License: GPL2
@@ -12,7 +12,7 @@
  * @author   Ralf Hortt
  * @license  GPL-2.0+
  * @link     htt://horttcore.de
- * @version  1.1
+ * @version  1.2
  * @since    1.0
 */
 
@@ -68,7 +68,12 @@ class Subtitle
 	{
 		global $post;
 
-		$post_type = ( isset( $_GET['post_type'] ) ) ? sanitize_text_field( $_GET['post_type'] ) : 'post';
+		if ( isset( $_GET['post_type'] ) )
+			$post_type = sanitize_text_field( $_GET['post_type'] );
+		elseif ( isset( $post->post_type ) )
+			$post_type = $post->post_type;
+		else
+			$post_type = 'post';
 
 		if ( post_type_supports( $post_type, 'subtitle' ) )
 			$this->subtitle_field( $post );
