@@ -1,6 +1,6 @@
 # Subtitle
 
-Subtitle for post type page`
+Subtitle for post type `page`
 
 ## Description
 
