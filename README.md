@@ -50,12 +50,12 @@ To add support for other custom post types use this WordPress function.
 
 ## Changelog
 
-1.2
+### 1.2
 * Bugfix: Subtitle input was displayed even if the post type did not support it
 
-1.1
+### 1.1
 * Enhancement: Code cleanup
 * Enhancement: Uninstall process
 
-1.0
+### 1.0
 * Initial release
