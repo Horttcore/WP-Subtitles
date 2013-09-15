@@ -1,6 +1,6 @@
 # Subtitle
 
-Subtitle for post type `page`
+Subtitle for post type page`
 
 ## Description
 
@@ -10,7 +10,7 @@ This Plugin creates a new input field for subtitles
 
 * Put the plugin file in your plugin directory and activate it in your WP backend.
 * Go to edit a page
-* Below title you can enter the `Subtitle
+* Below title you can enter the `Subtitle`
 
 ## Screenshots
 
