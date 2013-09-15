@@ -31,7 +31,7 @@ and
 
 ### Are there any filters I can use?
 
-There is just one filter called ´the_subtitle´
+There is just one filter called `the_subtitle`
 
 ### Where can I get support or report bugs?=
 
@@ -40,7 +40,7 @@ https://github.com/Horttcore/WordPress-Subtitle
 
 ### Are there any actions I can hook on?
 
-* `the_subtitle`
+Sorry no action hooks yet
 
 ### I want subtitles for another post type, is this possible?
 
