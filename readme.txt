@@ -1,10 +1,10 @@
-=== Subtitle ===
+=== HC Subtitle ===
 Contributors: Horttcore
 Donate link: http://www.horttcore.de
 Tags: subtitle
 Requires at least: 3.3
 Tested up to: 3.6
-Stable tag: 1.2
+Stable tag: 1.3
 
 Subtitle for post type ´page´
 
@@ -50,12 +50,17 @@ To add support for other custom post types use this WordPress function.
 
 == Changelog ==
 
-1.2
+= 1.3 =
+*   Security: Subtitle uses esc_html by default
+*   `Before` and `after` arguments for `the_subtitle()` template tag
+*   CSS enhancement
+
+= 1.2 =
 *   Bugfix: Subtitle input was displayed even if the post type did not support it
 
-1.1
+= 1.1 =
 *   Enhancement: Code cleanup
 *   Enhancement: Uninstall process
 
-1.0
+= 1.0 =
 *   Initial release

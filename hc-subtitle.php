@@ -3,7 +3,7 @@
  * Plugin Name: Subtitle
  * Plugin URI: http://horttcore.de
  * Description: Subtitle
- * Version: 1.2
+ * Version: 1.3
  * Author: Ralf Hortt
  * Author URI: http://horttcore.de
  * License: GPL2
@@ -12,7 +12,7 @@
  * @author   Ralf Hortt
  * @license  GPL-2.0+
  * @link     htt://horttcore.de
- * @version  1.2
+ * @version  1.3
  * @since    1.0
 */
 
@@ -41,8 +41,10 @@ class Subtitle
 	 *
 	 * Constructor
 	 *
-	 */
-	function __construct()
+	 * @access public
+	 * @author Ralf Hortt
+	 **/
+	public function __construct()
 	{
 		add_action( 'admin_print_styles-post-new.php', array( $this, 'enqueue_styles' ) );
 		add_action( 'admin_print_styles-post.php', array( $this, 'enqueue_styles' ) );
@@ -61,7 +63,6 @@ class Subtitle
 	 * Add subtitle field
 	 *
 	 * @access public
-	 * @return void
 	 * @author Ralf Hortt
 	 **/
 	public function edit_form_after_title()
@@ -85,7 +86,6 @@ class Subtitle
 	 * Enqueue Styles
 	 *
 	 * @access public
-	 * @return void
 	 * @author Ralf Hortt
 	 **/
 	public function enqueue_styles()
@@ -99,14 +99,15 @@ class Subtitle
 	 * Get Subtitle
 	 *
 	 * @static
+	 * @access public
 	 * @param int $post_id Post ID
 	 * @return str Subtitle
 	 * @author Ralf Hortt
 	 **/
-	static function get_subtitle( $post_id = FALSE )
+	public static function get_subtitle( $post_id = FALSE )
 	{
 		$post_id = ( FALSE !== $post_id ) ? $post_id : get_the_ID();
-		return apply_filters( 'the_subtitle', get_post_meta( $post_id, '_subtitle', TRUE ) );
+		return esc_html( apply_filters( 'the_subtitle', get_post_meta( $post_id, '_subtitle', TRUE ) ) );
 	}
 
 
@@ -140,7 +141,6 @@ class Subtitle
 	 * Metabox content
 	 *
 	 * @access public
-	 * @return void
 	 * @author Ralf Hortt
 	 */
 	public function subtitle_field( $post )
@@ -158,12 +158,16 @@ class Subtitle
 	 * Display Subtitle
 	 *
 	 * @static
-	 * @return void
+	 * @access public
+	 * @param str $before Before the subtitle
+	 * @param str $after After the subtitle
 	 * @author Ralf Hortt
 	 */
-	static function the_subtitle()
+	public static function the_subtitle( $before = '', $after = '' )
 	{
-		echo get_subtitle( get_the_ID() );
+		$subtitle = get_subtitle( get_the_ID() );
+		if ( '' != $subtitle )
+			echo $before . $subtitle . $after;
 	}
 
 
@@ -207,10 +211,11 @@ function has_subtitle( $post_id = FALSE )
 /**
  * Template Tag: Display Subtitle
  *
- * @return void
+ * @param str $before Before the subtitle
+ * @param str $after After the subtitle
  * @author Ralf Hortt
  */
-function the_subtitle()
+function the_subtitle( $before = '', $after = '' )
 {
-	echo Subtitle::get_subtitle();
+	echo Subtitle::get_subtitle( $before, $after );
 }
