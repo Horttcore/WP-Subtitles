@@ -10,14 +10,17 @@ This Plugin creates a new input field for subtitles
 
 * Put the plugin file in your plugin directory and activate it in your WP backend.
 * Go to edit a page
-* Below title you can enter the `Subtitle`
+* Below the title you can enter the `subtitle`
 
 ## Screenshots
 
 [![Subtitle Meta Box](https://raw.github.com/Horttcore/WordPress-Subtitle/master/screenshot-1.jpg)](https://raw.github.com/Horttcore/WordPress-Subtitle/master/screenshot-1.jpg)
 
-
 ## Frequently Asked Questions
+
+### In which languages is this plugin available
+
+Currently only english and german is supported.
 
 ### How can I output my subtitle
 
@@ -33,10 +36,10 @@ and
 
 There is just one filter called `the_subtitle`
 
-### Where can I get support or report bugs?=
+### Where can I get support or report bugs?
 
-Please use the github to report bugs or add feature requests!
-https://github.com/Horttcore/WordPress-Subtitle
+Please use the [github](https://github.com/Horttcore/WordPress-Subtitle) to report bugs or add feature requests!
+
 
 ### Are there any actions I can hook on?
 
