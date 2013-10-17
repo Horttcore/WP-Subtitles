@@ -1,4 +1,4 @@
-# Subtitle
+# WP Subtitle
 
 Subtitle for post type `page`
 
@@ -14,7 +14,7 @@ This Plugin creates a new input field for subtitles
 
 ## Screenshots
 
-![Subtitle Meta Box](https://raw.github.com/Horttcore/WordPress-Subtitle/master/screenshot-1.jpg)
+[![Subtitle Meta Box](https://raw.github.com/Horttcore/WordPress-Subtitle/master/screenshot-1.jpg)](https://raw.github.com/Horttcore/WordPress-Subtitle/master/screenshot-1.jpg)
 
 
 ## Frequently Asked Questions
